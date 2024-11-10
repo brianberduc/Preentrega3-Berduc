@@ -1,0 +1,238 @@
+/*MQ*/
+@media screen and (max-width: 480px) {
+/*General*/
+    /*Header*/
+    header {
+        justify-content: space-between;
+        height: 100px;
+    }
+    .logo {
+        width: 100%;
+    }
+    body header h1 {
+        display: none;
+    }
+    body header div nav .nav__list {
+        display: none !important;
+    }
+    .nav__list--mobile {
+        align-items: center;
+        width: 90px;
+        display: flex;
+        gap: 20px;
+        margin-left: 50px;
+    }
+    .nav__link--raya {
+        text-decoration: none;
+        color: #000;
+    }
+    /*Indice*/
+    .myContainer__indice {
+        height: 300px;
+        background-position: bottom;
+        background-size: contain;
+    }
+    .indice__home {  
+        padding-bottom: 20px;
+    }
+/*Home*/
+    .main {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .main__aside {
+        width: 100%;
+        order: 2;
+    }
+    .main__parrafo {
+        margin-top: 20px;
+        padding: 0 30px;
+    }
+    .parrafo__oculto {
+        display: none;
+    }
+    .main__img {
+        width: 100%;
+        height: 450px;
+        padding: 0px 20px;
+        margin-bottom: 10px;
+        border-radius: 10%;
+    }
+    /*Tecnologias*/
+    #carouselExample {
+        width: 90%;
+    }
+    /*Ubicacion y testimonios*/
+    .ubicacion__entrevista {
+        grid-template-columns: 1fr;
+    }
+    .nav__item img {
+        width: 100%;
+        height: 100%;
+    }
+    .dropdown {
+        margin-right: 32px;
+    }
+    .dropdown .dropdown-toggle {
+        width: 100%;
+        height: 100%;
+    }
+/*Especialidades*/
+    .profesionales {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6,1fr);
+    }
+/*Patologias*/
+.main__patologias {
+    grid-template-rows: 1fr;
+    overflow-x: scroll;
+    margin: 80px 20px;
+}
+/*Noticia*/
+.noticias__contenedor {
+    display: none;
+}
+.noticias__tablet {
+    display: flex;
+    justify-content: center;
+}
+.row__noticias {
+    gap: 40px;
+}
+.btn--noticias {
+    background-color: #205589;
+}
+/*Contacto*/
+    .main__contacto {
+        flex-direction: column;
+        font-size: 1.6em;
+        }
+    .titulo__contacto {
+        font-size: 30px;
+    }
+    .form-group textarea {
+        min-height: 150px;
+        max-height: 200px;
+    }
+    .ubicacion__contacto {
+        display: none;
+    }
+}
+/*Tienda*/
+    .productos {
+        grid-template-columns: 1fr; /* Los productos se organizan en una sola columna */
+    }
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+/*General*/
+    /*Header*/
+    header {
+        justify-content: space-between;
+        height: 110px;
+    }
+    .logo {
+        width: 100%;
+    }
+    body header h1 {
+        display: none;
+    }
+    body header div nav .nav__list{
+        display: none !important;
+    }
+    .dropdown-toggle{
+        cursor: pointer
+    }
+    .dropdown-menu {
+        padding: 0;
+    }
+    .dropdown-item:hover {
+            background-color: #14665Bdd;
+    }
+    .nav__list--mobile {
+        align-items:center;
+        width: 90px;
+        display: flex;
+        gap: 20px;
+        margin-left: 50px;
+    }
+    .nav__link--raya {
+        text-decoration: none;
+        color: #000;
+        font-size: 1.4em;
+        padding:  20px;
+    }
+    /*Indice*/
+    .myContainer__indice {
+        height: 50vh;
+    }
+    .indice__home {
+        padding-bottom: 18px;
+    }
+/*Home*/
+    .main {
+        height: inherit;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .main__aside {
+        display: none;
+    }
+    .main__subtitulo {
+        margin-left: 16px;
+    }
+    .main__parrafo {
+        padding: 0 16px;
+        height: 100%;
+    }
+    .main__img {
+    display: none;
+    }
+    /*Ubicacion y testimonios*/
+    .ubicacion__entrevista {
+        grid-template-columns: 1fr;
+    }
+/*Especialidades*/
+    .profesionales {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+/*Patologias*/
+.main__patologias {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+/*Noticias*/
+.noticias__contenedor {
+    display: none;
+}
+.noticias__tablet {
+    display: flex;
+    justify-content: center;
+} 
+.btn--noticias {
+    background-color: #205589;
+    &:hover{
+        background-color: transparent;
+        border: solid 1px #205589;
+        color: #205589;
+    }
+}
+/*Contacto*/
+    .main__contacto {
+        flex-direction: column;
+        font-size: 1.6em;
+        }
+    .titulo__contacto {
+        font-size: 30px;
+    }
+    .form-group textarea {
+        min-height: 150px;
+        max-height: 200px;
+    }
+    .btn-submit {
+        margin-bottom: 40px;
+    }
+    .ubicacion__contacto {
+        padding: 0px 20px;
+    }
+}
+

@@ -1,0 +1,39 @@
+/*Estilos para home*/
+/*Main*/
+.main {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+}
+.main__img {
+    width: 30vw;
+    height: 100%;
+    border-radius: 7px;
+}
+.main__subtitulo {
+    font-size: 24px;
+    font-weight: 600;
+}
+.main__parrafo {
+    width: 100%;
+    font-weight: 400;
+    margin: 0;
+}
+/*Entrevistas y ubicación*/
+.ubicacion__entrevista {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+}
+.ubicacion__entrevista--tamaño {
+width: 100%;
+height: 50%;
+}
+.titulo__tecnologia {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+

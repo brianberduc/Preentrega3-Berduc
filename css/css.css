@@ -1,0 +1,818 @@
+@charset "UTF-8";
+/*Propiedades compartidas entre las paginas*/
+/*Reset general*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Estilo general del body*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 15px;
+  background-color: #E6FDF2;
+  margin: 0;
+}
+
+/*Estilo para el header*/
+header {
+  z-index: 1000;
+  width: 100%;
+  background-color: #E6FDF2;
+  margin: 0;
+  border-bottom: groove 2px rgba(51, 51, 51, 0.1333333333);
+  position: fixed;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+header .myContainer { /*container 1*/
+  display: flex;
+  align-items: center;
+}
+header .myContainer a {
+  width: 130px;
+}
+header .myContainer a .logo {
+  width: 100%;
+  border-radius: 10px;
+  margin: 0;
+}
+header h1 {
+  padding: 0;
+  display: inline-block;
+  font-size: 22px;
+  margin: 0;
+}
+header .myContainer__nav { /*container 2*/
+  display: flex;
+  margin-left: 20px;
+}
+header .myContainer__nav .nav {
+  justify-content: space-between;
+  align-items: start;
+  text-align: center;
+}
+header .myContainer__nav .nav .nav__list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+header .myContainer__nav .nav .nav__list .nav__item {
+  display: inline-block;
+  justify-content: space-between;
+  font-weight: 600;
+  align-content: center;
+  margin: 0 20px;
+}
+header .myContainer__nav .nav .nav__list .nav__item:hover {
+  text-decoration: solid 1px;
+  background-color: rgba(119, 255, 221, 0.151);
+  padding: 5px 20px;
+  margin: 0;
+  border-radius: 10px;
+}
+header .myContainer__nav .nav .nav__list .nav__item .nav__link--raya {
+  text-decoration: none;
+  color: #05332D;
+}
+
+/*Indice*/
+.myContainer__indice {
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6)), url("https://cdn.lecturio.com/assets/Featured-image-Student-Blog-Hospital-Team.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body div .indice__home {
+  color: rgba(255, 255, 255, 0.9333333333);
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* Footer comun para todas las páginas*/
+footer {
+  font-weight: 600;
+}
+
+.logo__btp {
+  width: 270px;
+  height: 250px;
+}
+
+.bi-icon {
+  color: #212529;
+}
+.bi-icon:hover {
+  color: #05632D;
+}
+
+.wsp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px gray;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: transform 10ms;
+}
+.wsp:hover {
+  transform: scale(1.1);
+}
+
+/*Estilos para home*/
+/*Main*/
+.main {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.main__img {
+  width: 30vw;
+  height: 100%;
+  border-radius: 7px;
+}
+
+.main__subtitulo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.main__parrafo {
+  width: 100%;
+  font-weight: 400;
+  margin: 0;
+}
+
+/*Entrevistas y ubicación*/
+.ubicacion__entrevista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.ubicacion__entrevista--tamaño {
+  width: 100%;
+  height: 50%;
+}
+
+.titulo__tecnologia {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/*Estilos para especialidades*/
+.h2__especialidades {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.acordion_texto {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  height: 100%;
+}
+
+.accordion-item {
+  flex-grow: 1;
+}
+
+.acordion__boton {
+  font-weight: 500;
+}
+
+.profesionales {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+  margin: 40px;
+  font-weight: 400;
+}
+
+.profesionales__celdas {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.profesionales_img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: transform 0.1s;
+}
+.profesionales_img:hover {
+  transform: scale(1.1);
+}
+
+.profesional {
+  font-size: 20px;
+  color: #000;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/*Estilos para patologias*/
+.titulo__patologias {
+  line-height: 40px;
+}
+
+.main__patologias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 500px);
+  gap: 40px;
+  margin-top: 80px;
+  justify-items: center;
+  text-align: center;
+}
+
+.card--tamaño {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+  padding-top: 20px;
+}
+.card-text {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.btn {
+  background-color: #14665B;
+  color: white;
+}
+.btn:hover {
+  background-color: transparent;
+  color: #14665B;
+  font-weight: 600;
+  border: solid 2px #14665B;
+}
+
+/* Estilos para noticias */
+.noticias__contenedor {
+  display: flex;
+  flex-direction: column;
+}
+
+.noticia1__contenedor,
+.noticia2__contenedor {
+  display: flex;
+  gap: 15px;
+}
+
+.img__noticias {
+  width: 500px;
+  height: auto;
+}
+
+.texto__noticia {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.card--text {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.noticias__tablet {
+  display: none;
+}
+
+.caja-btn {
+  background-color: #14665B;
+  color: white;
+}
+.caja-btn:hover {
+  background-color: transparent;
+  color: #14665B;
+  font-weight: 600;
+  border: solid 2px #14665B;
+}
+
+/*Estilos de contacto*/
+.main__contacto {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+.formulario__contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  width: 100%;
+  font-weight: 400;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.text__formulario {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 150px;
+}
+
+/* Estilo para el botón de envío */
+.btn-submit {
+  padding: 10px 20px;
+  border: solid 2px;
+  border-radius: 4px;
+  background-color: #14665B;
+  color: white;
+  font-size: 16px;
+}
+.btn-submit:hover {
+  background-color: transparent;
+  color: #14665B;
+  font-weight: 600;
+}
+
+main .ubicacion-contacto {
+  width: 600px;
+}
+
+.nav__list--mobile {
+  display: none;
+}
+
+/* Contenedor principal */
+.tienda-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* 1 parte para los filtros y 3 partes para los productos */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilo para la columna de filtros */
+.filtros {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filtros h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.filtro-categoria, .filtro-precio, .filtro-busqueda {
+  margin-bottom: 15px;
+}
+
+.filtros select, .filtros input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo para la columna de productos */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.producto {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.producto p {
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.agregar-carrito {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.agregar-carrito:hover {
+  background-color: #218838;
+}
+
+/* Carrito flotante (minimizado) */
+.carrito {
+  position: fixed;
+  bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  display: block;
+  transition: all 0s ease-in-out;
+}
+
+.carrito.minimizado {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  left: 20px;
+  background-color: #28a745; /* Fondo verde cuando está minimizado */
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Icono de carrito cuando está minimizado */
+.carrito.minimizado::after {
+  content: "🛒"; /* Un ícono de carrito */
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.carrito > .contenido {
+  display: block;
+  padding: 15px;
+}
+
+.carrito.minimizado > .contenido {
+  display: none; /* Ocultar contenido cuando está minimizado */
+}
+
+/* Estilos del botón de minimizar */
+.minimizar-btn {
+  color: #28a745;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s ease;
+  height: 0;
+}
+
+/* Estilos de los botones de Finalizar Compra y Vaciar Carrito */
+#finalizar-compra, #vaciar-carrito {
+  background-color: #28a745; /* Color verde */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#finalizar-compra:hover, #vaciar-carrito:hover {
+  background-color: #218838; /* Un verde más oscuro al pasar el ratón */
+}
+
+/* Estilo para los enlaces de la barra de navegación */
+.nav__list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav__item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav__link--raya {
+  position: relative;
+}
+
+.nav__link--raya::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #28a745;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav__link--raya:hover::after {
+  transform: scaleX(1);
+}
+
+/* Menu hamburguesa */
+.nav__list--mobile .dropdown-menu {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav__item .dropdown-item {
+  font-size: 1.1em;
+  padding: 12px 20px;
+}
+
+.nav__item .dropdown-item:hover {
+  background-color: #f8f8f8;
+}
+
+/*MQ*/
+@media screen and (max-width: 480px) {
+  /*General*/
+  /*Header*/
+  header {
+    justify-content: space-between;
+    height: 100px;
+  }
+  .logo {
+    width: 100%;
+  }
+  body header h1 {
+    display: none;
+  }
+  body header div nav .nav__list {
+    display: none !important;
+  }
+  .nav__list--mobile {
+    align-items: center;
+    width: 90px;
+    display: flex;
+    gap: 20px;
+    margin-left: 50px;
+  }
+  .nav__link--raya {
+    text-decoration: none;
+    color: #000;
+  }
+  /*Indice*/
+  .myContainer__indice {
+    height: 300px;
+    background-position: bottom;
+    background-size: contain;
+  }
+  .indice__home {
+    padding-bottom: 20px;
+  }
+  /*Home*/
+  .main {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main__aside {
+    width: 100%;
+    order: 2;
+  }
+  .main__parrafo {
+    margin-top: 20px;
+    padding: 0 30px;
+  }
+  .parrafo__oculto {
+    display: none;
+  }
+  .main__img {
+    width: 100%;
+    height: 450px;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+  }
+  /*Tecnologias*/
+  #carouselExample {
+    width: 90%;
+  }
+  /*Ubicacion y testimonios*/
+  .ubicacion__entrevista {
+    grid-template-columns: 1fr;
+  }
+  .nav__item img {
+    width: 100%;
+    height: 100%;
+  }
+  .dropdown {
+    margin-right: 32px;
+  }
+  .dropdown .dropdown-toggle {
+    width: 100%;
+    height: 100%;
+  }
+  /*Especialidades*/
+  .profesionales {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  /*Patologias*/
+  .main__patologias {
+    grid-template-rows: 1fr;
+    overflow-x: scroll;
+    margin: 80px 20px;
+  }
+  /*Noticia*/
+  .noticias__contenedor {
+    display: none;
+  }
+  .noticias__tablet {
+    display: flex;
+    justify-content: center;
+  }
+  .row__noticias {
+    gap: 40px;
+  }
+  .btn--noticias {
+    background-color: #205589;
+  }
+  /*Contacto*/
+  .main__contacto {
+    flex-direction: column;
+    font-size: 1.6em;
+  }
+  .titulo__contacto {
+    font-size: 30px;
+  }
+  .form-group textarea {
+    min-height: 150px;
+    max-height: 200px;
+  }
+  .ubicacion__contacto {
+    display: none;
+  }
+}
+/*Tienda*/
+.productos {
+  grid-template-columns: 1fr; /* Los productos se organizan en una sola columna */
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  /*General*/
+  /*Header*/
+  header {
+    justify-content: space-between;
+    height: 110px;
+  }
+  .logo {
+    width: 100%;
+  }
+  body header h1 {
+    display: none;
+  }
+  body header div nav .nav__list {
+    display: none !important;
+  }
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+  .dropdown-menu {
+    padding: 0;
+  }
+  .dropdown-item:hover {
+    background-color: rgba(20, 102, 91, 0.8666666667);
+  }
+  .nav__list--mobile {
+    align-items: center;
+    width: 90px;
+    display: flex;
+    gap: 20px;
+    margin-left: 50px;
+  }
+  .nav__link--raya {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.4em;
+    padding: 20px;
+  }
+  /*Indice*/
+  .myContainer__indice {
+    height: 50vh;
+  }
+  .indice__home {
+    padding-bottom: 18px;
+  }
+  /*Home*/
+  .main {
+    height: inherit;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main__aside {
+    display: none;
+  }
+  .main__subtitulo {
+    margin-left: 16px;
+  }
+  .main__parrafo {
+    padding: 0 16px;
+    height: 100%;
+  }
+  .main__img {
+    display: none;
+  }
+  /*Ubicacion y testimonios*/
+  .ubicacion__entrevista {
+    grid-template-columns: 1fr;
+  }
+  /*Especialidades*/
+  .profesionales {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  /*Patologias*/
+  .main__patologias {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  /*Noticias*/
+  .noticias__contenedor {
+    display: none;
+  }
+  .noticias__tablet {
+    display: flex;
+    justify-content: center;
+  }
+  .btn--noticias {
+    background-color: #205589;
+  }
+  .btn--noticias:hover {
+    background-color: transparent;
+    border: solid 1px #205589;
+    color: #205589;
+  }
+  /*Contacto*/
+  .main__contacto {
+    flex-direction: column;
+    font-size: 1.6em;
+  }
+  .titulo__contacto {
+    font-size: 30px;
+  }
+  .form-group textarea {
+    min-height: 150px;
+    max-height: 200px;
+  }
+  .btn-submit {
+    margin-bottom: 40px;
+  }
+  .ubicacion__contacto {
+    padding: 0px 20px;
+  }
+}
+
+/*# sourceMappingURL=css.css.map */

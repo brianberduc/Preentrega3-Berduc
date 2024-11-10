@@ -1,0 +1,207 @@
+/* Contenedor principal */
+.tienda-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 1 parte para los filtros y 3 partes para los productos */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo para la columna de filtros */
+.filtros {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filtros h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.filtro-categoria, .filtro-precio, .filtro-busqueda {
+    margin-bottom: 15px;
+}
+
+.filtros select, .filtros input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para la columna de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.agregar-carrito {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.agregar-carrito:hover {
+    background-color: #218838;
+}
+
+/* Carrito flotante (minimizado) */
+.carrito {
+    position: fixed;
+    bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: block;
+    transition: all 0s ease-in-out;
+}
+
+.carrito.minimizado {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    left: 20px;
+    background-color: #28a745; /* Fondo verde cuando está minimizado */
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Icono de carrito cuando está minimizado */
+.carrito.minimizado::after {
+    content: "🛒"; /* Un ícono de carrito */
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.carrito > .contenido {
+    display: block;
+    padding: 15px;
+}
+
+.carrito.minimizado > .contenido {
+    display: none; /* Ocultar contenido cuando está minimizado */
+}
+
+/* Estilos del botón de minimizar */
+.minimizar-btn {
+    color: #28a745;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    height: 0;
+}
+
+/* Estilos de los botones de Finalizar Compra y Vaciar Carrito */
+#finalizar-compra, #vaciar-carrito {
+    background-color: #28a745; /* Color verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#finalizar-compra:hover, #vaciar-carrito:hover {
+    background-color: #218838; /* Un verde más oscuro al pasar el ratón */
+}
+
+/* Estilo para los enlaces de la barra de navegación */
+.nav__list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav__item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav__link--raya {
+    position: relative;
+}
+
+.nav__link--raya::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #28a745;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav__link--raya:hover::after {
+    transform: scaleX(1);
+}
+
+/* Menu hamburguesa */
+.nav__list--mobile .dropdown-menu {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav__item .dropdown-item {
+    font-size: 1.1em;
+    padding: 12px 20px;
+}
+
+.nav__item .dropdown-item:hover {
+    background-color: #f8f8f8;
+}
+

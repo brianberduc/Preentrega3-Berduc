@@ -1,0 +1,24 @@
+@mixin medidas ($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin botones {
+        background-color: #14665B;
+        color: white;
+        &:hover {
+            background-color: transparent;
+            color: #14665B;
+            font-weight: 600;
+            border: solid 2px #14665B;
+        }
+}
+@mixin titulos {
+    font-size: 24px;
+    font-weight: 600;
+}
+

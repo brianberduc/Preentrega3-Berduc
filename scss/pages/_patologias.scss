@@ -1,0 +1,29 @@
+/*Estilos para patologias*/
+.titulo__patologias {
+    line-height: 40px;
+}
+.main__patologias {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,500px);
+    gap: 40px;
+    margin-top: 80px;
+    justify-items: center;
+    text-align: center;
+}
+.card {
+    &--tamaño {
+        width: 200px;
+        height: 200px;
+        align-self: center;
+        padding-top: 20px;
+    }
+    &-text {
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+.btn {
+    @include botones;
+}
+

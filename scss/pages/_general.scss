@@ -1,0 +1,125 @@
+/*Propiedades compartidas entre las paginas*/
+/*Reset general*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Estilo general del body*/
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 15px;
+    background-color: $color-principal;
+    margin: 0;
+}
+/*Estilo para el header*/
+//Nesting
+header {
+    z-index: 1000;
+    width: 100%;
+    background-color: $color-principal;
+    margin: 0;
+    border-bottom: groove 2px rgba(51, 51, 51, 0.1333333333);
+    position: fixed;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    .myContainer { /*container 1*/ 
+        display: flex;
+        align-items: center;
+        a {
+            width: 130px;
+            .logo {
+                width: 100%;
+                border-radius: 10px;
+                margin: 0;
+            }
+        }
+        
+    }
+    h1 {
+        padding: 0;
+        display: inline-block;
+        font-size: 22px;
+        margin: 0;
+    }
+    .myContainer__nav { /*container 2*/
+        display: flex;
+        margin-left: 20px;
+        .nav {
+            justify-content: space-between;
+            align-items: start;
+            text-align: center;
+            .nav__list {
+                list-style-type: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+                width: 50%;
+                .nav__item {
+                    display: inline-block;
+                    justify-content: space-between;
+                    font-weight: 600;
+                    align-content: center;
+                    margin: 0 20px;
+                    &:hover{
+                        text-decoration: solid 1px;
+                        background-color: rgba(119, 255, 221, 0.151);
+                        padding: 5px 20px;
+                        margin: 0;
+                        border-radius: 10px;
+                    }
+                    .nav__link--raya {
+                        text-decoration: none;
+                        color: #05332D;
+                    }
+                }
+            }
+        }
+    }
+}
+/*Indice*/
+.myContainer__indice {
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6)), url("https://cdn.lecturio.com/assets/Featured-image-Student-Blog-Hospital-Team.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 150px;
+    @include display;
+}
+body div .indice__home {
+    color: rgba(255, 255, 255, 0.9333333333);
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+/* Footer comun para todas las páginas*/
+footer{
+    font-weight: 600;
+}
+.logo__btp {
+    width: 270px;
+    height: 250px;
+}
+.bi-icon {
+    color: #212529;
+    &:hover {
+    color:#05632D
+}
+}
+.wsp {
+    @include medidas (50px,50px);
+    border-radius: 50%;
+    box-shadow: 0 0 20px gray;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transition: transform 10ms;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
