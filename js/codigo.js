@@ -135,12 +135,6 @@ elementos.carritoFlotante.addEventListener('click', () => {
 
 elementos.finalizarCompra.addEventListener('click', () => {
 
-    const toastButton = document.createElement('button');
-    toastButton.type = 'button';
-    toastButton.classList.add('btn', 'btn-primary');
-    toastButton.id = 'liveToastBtn';
-    toastButton.textContent = 'Show live toast';
-
     const toastContainer = document.createElement('div');
     toastContainer.classList.add('toast-container', 'position-fixed', 'bottom-0', 'end-0', 'p-3');
 
@@ -175,7 +169,6 @@ elementos.finalizarCompra.addEventListener('click', () => {
     toast.appendChild(toastBody);
 
     toastContainer.appendChild(toast);
-    document.body.appendChild(toastButton);
     document.body.appendChild(toastContainer);
 
     const toastElement = new bootstrap.Toast(toast);
