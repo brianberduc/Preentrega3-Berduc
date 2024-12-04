@@ -1,5 +1,5 @@
 async function obtenerProductos() {
-    const response = await fetch(`${window.origin}/json/productos.json`);
+    const response = await fetch('https://brianberduc.github.io/ProyectoFinal-Berduc/json/productos.json');
     return await response.json();
 }
 
