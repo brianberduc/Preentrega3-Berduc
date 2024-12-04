@@ -105,7 +105,7 @@
     text-align: center;
     cursor: pointer;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* Icono de carrito cuando está minimizado */
@@ -113,6 +113,7 @@
     content: "🛒"; /* Un ícono de carrito */
     font-size: 20px;
     line-height: 50px;
+    color: white; /* Color blanco para el icono */
 }
 
 .carrito > .contenido {

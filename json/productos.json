@@ -1,0 +1,33 @@
+{
+  "productos" : [
+    {
+      "imagen": "img/camisa.jpg",
+      "nombre": "Producto 1",
+      "precio": 30,
+      "categoria": "Vendas",
+      "id": 1
+    },
+    {
+      "imagen": "img/camisa.jpg",
+      "nombre": "Producto 2",
+      "precio": 40,
+      "categoria": "Vendas",
+      "id": 2
+    },
+    {
+      "imagen": "img/camisa.jpg",
+      "nombre": "Producto 1",
+      "precio": 30,
+      "categoria": "Vendas",
+      "id": 3
+    },
+    {
+      "imagen": "img/camisa.jpg",
+      "nombre": "Producto 2",
+      "precio": 40,
+      "categoria": "Vendas",
+      "id": 4
+    }
+  ]
+
+}
